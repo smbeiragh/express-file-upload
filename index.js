@@ -11,6 +11,7 @@ app.all('/upload', function(req, res, next) {
 });
 */
 
+// the name of file upload field in submited form is "file"
 app.post('/upload', upload.single('file'), function (req, res, next) {
   console.log(req.body);
   console.log(req.file);
